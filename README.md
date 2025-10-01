@@ -10,7 +10,9 @@ A high-performance Sudoku solver with multiple solving algorithms and parallel p
 
 ## Demo
 
-[![Watch Demo Video](https://img.shields.io/badge/▶-Watch%20Demo%20Video-2ea44f?style=for-the-badge)](sudokoapp_demo.mp4)
+![Demo Animation](demo/demo.gif)
+
+[▶ Watch Full Demo Video](demo/sudokoapp_demo.mp4)
 
 ## Quick Start
 
