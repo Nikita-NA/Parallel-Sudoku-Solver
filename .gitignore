@@ -1,0 +1,21 @@
+.vscode/
+Project_Proposal.pdf
+Project_Report/
+Papers_for_Sudoku/
+sudoku_main
+solution.txt
+TODOs.txt
+ 
+# Windows executable (built binary)
+sudoku_main.exe
+
+# Web app dependencies and runtime uploads
+web/node_modules/
+web/uploads/
+web/*.log
+web/.cache/
+
+# OS/editor junk
+.DS_Store
+Thumbs.db
+.idea/

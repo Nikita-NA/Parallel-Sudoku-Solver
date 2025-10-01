@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Parallel Sudoku Solver</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Parallel Sudoku Solver</h1>
+      <p class="subtitle">Run C++ solvers (DLX, Backtracking, Brute Force) with optional OpenMP parallelism.</p>
+    </header>
+
+    <section class="panel">
+      <div class="form-row">
+        <label for="testCase">Test case</label>
+        <select id="testCase"></select>
+        <button id="reloadTests" class="secondary">Reload</button>
+      </div>
+
+      <div class="divider">or</div>
+
+      <div class="form-row">
+        <label for="file">Upload file</label>
+        <input type="file" id="file" accept=".txt" />
+      </div>
+
+      <div class="divider">or</div>
+
+      <div class="form-row">
+        <label for="inlineText">Paste grid</label>
+        <textarea id="inlineText" rows="6" placeholder="Paste puzzle text here..."></textarea>
+      </div>
+
+      <div class="row">
+        <div class="form-row">
+          <label for="mode">Mode</label>
+          <select id="mode">
+            <option value="0">0 — Sequential Backtracking</option>
+            <option value="1">1 — Sequential Brute Force</option>
+            <option value="2">2 — Parallel Brute Force (OpenMP)</option>
+            <option value="3" selected>3 — Sequential DLX</option>
+            <option value="4">4 — Parallel DLX (OpenMP)</option>
+            <option value="5">5 — Sequential Forward Checking</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="threads">Threads</label>
+          <input id="threads" type="number" value="8" min="1" step="1" />
+        </div>
+        <div class="form-row">
+          <label for="timeout">Timeout (s)</label>
+          <input id="timeout" type="number" value="30" min="5" step="5" />
+        </div>
+        <div class="form-row checkbox">
+          <label>
+            <input id="writeToFile" type="checkbox" /> Write solution to file
+          </label>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="run">Run Solver</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Output</h2>
+      <div class="output">
+        <div class="output-col">
+          <h3>Console</h3>
+          <pre id="logs" class="logs"></pre>
+        </div>
+        <div class="output-col">
+          <h3>Summary</h3>
+          <div id="summary" class="summary"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>Local web UI for the C++ Parallel Sudoku Solver</span>
+    </footer>
+  </div>
+
+  <script src="main.js" type="module"></script>
+</body>
+</html>

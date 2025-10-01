@@ -1,0 +1,26 @@
+:root{--bg:#0f1220;--panel:#171a2b;--muted:#9aa4b2;--text:#eef1f7;--accent:#5b8cff;--accent2:#22d3ee;--border:#242842}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:linear-gradient(180deg,#0b0e1a,#11152a);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.container{max-width:1100px;margin:0 auto;padding:24px}
+header{margin-bottom:16px}
+header h1{margin:0;font-size:28px;letter-spacing:.3px}
+.subtitle{margin:6px 0 0;color:var(--muted);font-size:14px}
+.panel{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:16px 16px 18px;margin-bottom:16px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.form-row{display:flex;gap:12px;align-items:center;margin:8px 0}
+.form-row>label{min-width:110px;color:var(--muted)}
+.form-row>select,.form-row>input[type="number"],.form-row>input[type="file"],.form-row>textarea{flex:1;background:#0f1324;border:1px solid var(--border);border-radius:8px;color:var(--text);padding:10px 12px;font:inherit}
+.form-row>textarea{resize:vertical}
+.form-row.checkbox{align-items:center}
+.divider{display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:12px;margin:8px 0}
+.row{display:flex;gap:16px;flex-wrap:wrap}
+.actions{display:flex;gap:8px;justify-content:flex-end;margin-top:8px}
+button{background:linear-gradient(135deg,var(--accent),var(--accent2));color:white;border:none;border-radius:10px;padding:10px 14px;font-weight:600;cursor:pointer;box-shadow:0 6px 20px rgba(91,140,255,.3);transition:transform .05s ease}
+button:hover{transform:translateY(-1px)}
+button.secondary{background:transparent;border:1px solid var(--border);color:var(--text)}
+.output{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.output-col{min-width:0}
+@media(max-width:900px){.output{grid-template-columns:1fr}}
+.logs{background:#0b0e1e;border:1px solid var(--border);border-radius:8px;padding:12px;height:360px;overflow:auto;color:#d6eaff;font-family:ui-monospace,Consolas,Monaco,monospace;white-space:pre-wrap;word-break:break-word;overflow-wrap:anywhere}
+.summary{background:#0b0e1e;border:1px solid var(--border);border-radius:8px;padding:12px;min-height:360px}
+footer{margin-top:12px;color:var(--muted);font-size:12px;text-align:center}
